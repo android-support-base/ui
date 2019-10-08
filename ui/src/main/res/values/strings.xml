@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通用字符串-->
+    <string name="loading">正在加载&#8230;</string>
+    <string name="all">全部</string>
+    <string name="done">完成&#160;</string>
+    <string name="please_waiting">请稍候&#8230;</string>
+    <string name="delete">删除</string>
+    <string name="warn">警告</string>
+    <string name="tips">提示</string>
+    <string name="prompt">提示</string>
+    <string name="jump_over">跳过</string>
+    <string name="more">更多</string>
+    <string name="search">搜索</string>
+    <string name="download">下载</string>
+    <string name="exit">退出</string>
+    <string name="go_on">继续</string>
+    <string name="retreat">后退</string>
+    <string name="back">回退</string>
+    <string name="share">分享</string>
+    <string name="search_hint">搜索\u2026</string>
+    <string name="settings">设置</string>
+    <string name="refresh">刷新</string>
+    <string name="install">安装</string>
+    <string name="launcher">启动</string>
+    <string name="unknown">@android:string/unknownName</string>
+    <string name="toast">Toast</string>
+    <string name="title">Title</string>
+
+    <!--消息-->
+    <string name="request_permission">申请权限</string>
+    <string name="granted_permission">授予权限</string>
+    <string name="no_data_please_later_retry">没有数据，请稍后再试</string>
+    <string name="_please_click_retry">%s，请单击重试</string>
+    <string name="load_failed_please_click_retry">加载失败，请单击重试</string>
+    <string name="load_end">没有更多数据</string>
+    <string name="whether_quit_application">是否退出应用程序?</string>
+    <string name="already_copied_to_the_clipboard">已经复制到剪切板</string>
+
+    <string name="ask_for_verify_code">获取验证码</string>
+
+    <!--字符串格式-->
+    <string name="symbol_segmentation_or">%1s | %2s</string>
+    <string name="symbol_segmentation_and">%1s and %2s</string>
+
+</resources>

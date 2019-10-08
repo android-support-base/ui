@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common characters, Capitalize the first letter-->
+    <string name="loading">Loading\u2026</string>
+    <string name="all">All</string>
+    <string name="done">Done&#160;</string>
+    <string name="please_waiting">Please waiting&#8230;</string>
+    <string name="warn">Warn</string>
+    <string name="tips">Tips</string>
+    <string name="prompt">Prompt</string>
+    <string name="more">More</string>
+    <string name="search">Search</string>
+    <string name="download">Download</string>
+    <string name="exit">Exit</string>
+    <string name="go_on">Continue</string>
+    <string name="retreat">Retreat</string>
+    <string name="back">Back</string>
+    <string name="share">Share</string>
+    <string name="search_hint">Search\u2026</string>
+    <string name="settings">Settings</string>
+    <!--Message-->
+    <string name="request_permission">Apply for permission</string>
+    <string name="granted_permission">Granted permission</string>
+    <string name="no_data_please_click_retry">没有数据，请单击重试</string>
+</resources>

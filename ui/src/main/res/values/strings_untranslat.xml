@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!--Wrap system resources untranslat-->
+    <string name="empty"></string>
+    <string name="ok" translatable="false">@android:string/ok</string>
+    <string name="cancel" translatable="false">@android:string/cancel</string>
+    <string name="yes" translatable="false">@android:string/yes</string>
+    <string name="no" translatable="false">@android:string/no</string>
+    <string name="cut" translatable="false">@android:string/cut</string>
+    <string name="copy" translatable="false">@android:string/copy</string>
+    <string name="search_go" translatable="false">@android:string/search_go</string>
+    <!-- 字符限制 -->
+    <string name="digits_phone_number">0123456789</string>
+    <string name="digits_username">_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ@.</string>
+    <string name="digits_password">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ~!@#$%^*()_+`-=[];,./{}:"|?</string>
+</resources>

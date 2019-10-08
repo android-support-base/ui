@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero">0dp</dimen>
+    <!--margin size-->
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <!--standard font size-->
+    <dimen name="font_tiny">8sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_huge">32sp</dimen>
+    <!--particular font size 特定字体大小 标题-->
+    <item name="fontTitle" type="dimen" />
+    <item name="fontTabText" type="dimen" />
+    <!--Font margin-->
+    <item name="font_margin" type="dimen" />
+    <!--view size-->
+    <!--系统默认<dimen name="actionBarSize">56dp</dimen>-->
+    <item name="actionBarSize" type="dimen" />
+    <!--系统默认<dimen name="tabSize">32dp</dimen>-->
+    <!--系统默认<dimen name="statusBarSize">24dp</dimen>-->
+    <!--Layout height-->
+    <item name="height_app_bar" type="dimen" />
+    <item name="height_tab" type="dimen" />
+    <item name="tabLayoutSize" type="dimen" />
+</resources>

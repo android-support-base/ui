@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 矩形 圆角 填充 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 填充黑色,透明度50% -->
+    <solid android:color="#8025231f" />
+
+    <!-- 边框透明 -->
+    <stroke
+        android:width="1px"
+        android:color="#00000000" />
+
+    <!-- 圆角角度 -->
+    <corners
+        android:bottomLeftRadius="8dp"
+        android:bottomRightRadius="8dp"
+        android:topLeftRadius="8dp"
+        android:topRightRadius="8dp" />
+
+</shape>

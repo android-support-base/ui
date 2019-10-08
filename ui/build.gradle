@@ -1,0 +1,105 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+//        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 14
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 6
+        versionName "1.0.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        compileOptions {
+            encoding "UTF-8"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            android.libraryVariants.all { variant ->
+//                variant.outputs.all {
+//                    outputFileName = "android-support-ui-${defaultConfig.versionName}.aar"
+//                }
+//            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    // google support library
+    implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+    // amlzq support library
+    implementation "com.amlzq.android:log:${rootProject.ext.logVersion}"
+    implementation "com.amlzq.android:annotations:${rootProject.ext.annotationsVersion}"
+    implementation "com.amlzq.android:utils:${rootProject.ext.utilsVersion}"
+}
+
+// 以下是发布到远程 jCenter 仓库配置
+// 执行gradlew clean build bintrayUpload -PbintrayUser=${BINTRAY_USERNAME} -PbintrayKey=${BINTRAY_KEY} -PdryRun=false
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.1'
+    }
+}
+
+// 解决注释里面有中文导致maven错误：编码GBK的不可映射字符
+// 由于一些javadoc错误，
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet') // 忽略javadoc错误
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+}
+
+publish {
+    userOrg = 'amlzq' // 组织用户名
+    repoName = 'android-support-base' // maven类型仓库名称
+    groupId = 'com.amlzq.android' //
+    artifactId = 'ui'
+    publishVersion = android.defaultConfig.versionName
+    desc = 'android support api ui'
+    website = 'https://github.com/android-support-base/ui'
+    repository = 'https://github.com/android-support-base/ui.git'
+}
+
+//// 以下是发布到本地 maven 仓库配置
+//// 执行 gradlew uploadArchives
+//apply plugin: 'maven'
+//
+//// 获取local.properties的内容
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        repository(url: properties.getProperty("mavenLocal"))
+//        pom.groupId = "com.amlzq.android"
+//        pom.artifactId = "ui"
+//        pom.version = android.defaultConfig.versionName
+//    }
+//}

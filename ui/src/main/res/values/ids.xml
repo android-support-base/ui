@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fragment_container" type="id" />
+    <item name="status_bar" type="id" />
+    <item name="translucent_view" type="id" />
+    <!--VMultiple iew Tag-->
+    <item name="tag1" type="id" />
+    <item name="tag2" type="id" />
+    <item name="tag3" type="id" />
+    <item name="tag4" type="id" />
+    <item name="tag5" type="id" />
+</resources>

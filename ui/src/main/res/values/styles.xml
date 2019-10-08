@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--通用样式，适用于活动，对话框，控件-->
+
+    <!--APP主题-->
+    <item name="AppTheme" type="style" />
+    <item name="Activity" type="style" />
+    <item name="Fragment" type="style" />
+    <item name="Dialog" type="style" />
+    <item name="Toast" type="style" />
+    <item name="Snackbar" type="style" />
+    <item name="Notification" type="style" />
+
+    <!-- Widget styling -->
+    <item name="View" type="style" />
+    <item name="Widget" type="style" />
+    <item name="TextView" type="style" />
+    <item name="EditText" type="style" />
+    <item name="Button" type="style" />
+    <item name="ImageButton" type="style" />
+    <item name="Image" type="style" />
+    <item name="Toolbar" type="style" />
+    <item name="AppBarLayout" type="style" />
+    <item name="RecyclerView" type="style" />
+    <item name="SwipeRefreshLayout" type="style" />
+    <item name="ImageView" type="style" />
+    <item name="RadioButton" type="style" />
+    <item name="CollapsingToolbarLayout" type="style" />
+
+    <!-- 无操作栏的活动 -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 全屏的活动（无操作栏/标题栏，无状态栏） -->
+    <style name="AppTheme.Fullscreen" parent="@android:style/Theme.NoTitleBar.Fullscreen" />
+    <!-- 白色背景 -->
+    <style name="AppTheme.Light.Fullscreen" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+    <!-- 黑色背景 -->
+    <style name="AppTheme.Black.Fullscreen" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+    <!-- 半透明系统栏（包括状态栏和虚拟键栏）的活动 -->
+    <!-- 根布局需要android:fitsSystemWindows="true" -->
+    <style name="AppTheme.TranslucentSystemBar" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <!-- 半透明系统栏（包括状态栏和虚拟键栏），无操作栏的活动，根视图需要android:fitsSystemWindows="true"  -->
+    <style name="AppTheme.TranslucentSystemBarAndNoActionBar" parent="AppTheme.NoActionBar">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <!-- 自定义系统栏颜色的活动 -->
+    <!-- 适合自定义操作栏的活动，根布局颜色与操作栏的颜色一致，并将内容布局设置为白色 -->
+    <!-- 参考http://blog.coderclock.com/2016/02/04/android/Android%E5%BC%80%E5%8F%91%EF%BC%9ATranslucent%20System%20Bar%20%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/ -->
+    <style name="AppTheme.ColorSystemBar" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <!-- 自定义状态栏颜色的活动 -->
+    <!-- 仿QQ状态栏效果 -->
+    <!-- 适合自定义操作栏的活动，根布局颜色与操作栏的颜色一致，并将内容布局设置为白色 -->
+    <style name="Activity.FitsStatusBar" parent="AppTheme">
+        <!--在Android 4.4之前无法修改颜色，直接跟随系统主题-->
+    </style>
+
+    <!-- 透明状态栏 -->
+    <style name="Activity.TransparentStatusBar" parent="AppTheme">
+
+    </style>
+
+    <!--v7库的全屏对话框-->
+    <style name="Dialog.FullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="ImageButton.NoBackground">
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--在Android L 5.0中加入了触摸反馈动画 波纹扩散效果-->
+    <style name="View.RippleEffect">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Dialog.Loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <!-- 自定义进度条(加载等候)样式 -->
+    <style name="ProgressBar.Loading" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/animated_rotate_loading</item>
+        <item name="android:minWidth">36dp</item>
+        <item name="android:maxWidth">72dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:maxHeight">72dp</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="OverFlowMenuTheme" parent="AppTheme">
+        <item name="actionMenuTextColor">@color/textColorSecondary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="Toolbar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/fontTitle</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="TabLayout.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/fontTabText</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>

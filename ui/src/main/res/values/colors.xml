@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Primary color 原色-->
+    <color name="red">#FF0000</color>
+    <!--Green	纯绿	#008000	0,128,0-->
+    <color name="green">#008000</color>
+    <!--Blue	纯蓝	#0000FF	0,0,255-->
+    <color name="blue">#0000FF</color>
+    <!--Solid color 纯色-->
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="whiteDark">#F9F9F9</color>
+    <color name="gray">@android:color/darker_gray</color>
+    <color name="transparent">@android:color/transparent</color>
+    <!--Logcat color 日志色-->
+    <color name="colorVerbose">#BBBBBB</color>
+    <color name="colorDebug">#0070BB</color>
+    <color name="colorInfo">#48BB31</color>
+    <color name="colorWarn">#BBBB23</color>
+    <color name="colorError">#FF0006</color>
+    <color name="colorAssert">#8F0005</color>
+    <!--主题-->
+    <color name="colorLight">#F5F5F5</color>
+    <color name="colorDark">#212121</color>
+    <!--Application Predefined ID 应用预定义ID-->
+    <!--半透明-->
+    <item name="translucent" type="color" />
+    <!--主色，工具栏默认背景色-->
+    <item name="colorPrimary" type="color" />
+    <!--主暗色，状态栏默认背景色-->
+    <item name="colorPrimaryDark" type="color" />
+    <item name="colorPrimaryLight" type="color" />
+    <!--强调，重读，能响应，各个控件被选中时的默认颜色-->
+    <item name="colorAccent" type="color" />
+    <item name="colorAccentDark" type="color" />
+    <!-- 进度色 -->
+    <item name="colorProgress" type="color" />
+    <!-- 禁止色 -->
+    <item name="colorDisable" type="color" />
+    <!-- 来源于materialpalette，未知用途 -->
+    <item name="colorIcons" type="color" />
+    <!-- 分隔色 -->
+    <item name="colorDivider" type="color" />
+    <!--主字体色，默认是工具栏菜单字体色-->
+    <item name="textColorPrimary" type="color" />
+    <!--副文本字体色-->
+    <item name="textColorSecondary" type="color" />
+    <!--正文字体色-->
+    <item name="textColor" type="color" />
+    <!--状态栏背景色-->
+    <item name="statusBar" type="color" />
+    <!--窗口背景色-->
+    <item name="windowBackground" type="color" />
+    <!--工具栏背景色-->
+    <item name="appBarBackground" type="color" />
+    <!--内容背景色-->
+    <item name="contentBackground" type="color" />
+    <!--应用导航栏背景色-->
+    <item name="appNavigationBar" type="color" />
+    <!--导航栏背景色-->
+    <item name="navigationBar" type="color" />
+    <!--对话框背景色-->
+    <item name="dialogBackground" type="color" />
+    <!--圆点背景色-->
+    <item name="colorDot" type="color" />
+    <!--占位图颜色-->
+    <item name="colorPlaceholder" type="color" />
+    <!--标题，副标题，描述的颜色-->
+    <item name="titleColor" type="color" />
+    <item name="subTitleColor" type="color" />
+    <item name="descColor" type="color" />
+
+    <!--http://www.sioe.cn/yingyong/yanse-rgb-16/-->
+    <!--https://www.materialpalette.com/-->
+</resources>

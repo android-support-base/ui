@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--API21 Android5.0-->
+    <!--符合Material Design的样式-->
+
+    <!-- 无操作栏的活动 -->
+    <style name="Activity.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- 半透明系统栏（包括状态栏和虚拟键栏）的活动 -->
+    <!-- 浮动系统栏的活动 -->
+    <!-- 状态栏和虚拟键栏悬浮在布局之上 -->
+    <!-- API21开始支持动态改变状态栏背景色 -->
+    <!--根布局需要android:fitsSystemWindows="true"-->
+    <style name="AppTheme.TranslucentSystemBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- 半透明系统栏（包括状态栏和虚拟键栏），无操作栏的活动 -->
+    <!-- API21开始支持动态改变状态栏背景色 -->
+    <style name="AppTheme.TranslucentSystemBarAndNoActionBar" parent="AppTheme.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.ColorSystemBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>  <!--true则布局悬浮其上-->
+        <!--API21开始可以自定义颜色，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="android:navigationBarColor">@color/navigationBar</item>
+    </style>
+
+    <!--根布局需要android:fitsSystemWindows="true"-->
+    <style name="Activity.FitsStatusBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- 透明状态栏 -->
+    <style name="Activity.TransparentStatusBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+</resources>

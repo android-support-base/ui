@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--https://stackoverflow.com/questions/26533510/android-toolbar-center-title-and-custom-font-->
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <include layout="@layout/toolbar" />
+
+</android.support.design.widget.AppBarLayout>

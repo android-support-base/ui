@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--API19 Android4.4-->
+
+    <!-- 半透明系统栏（包括状态栏和虚拟键栏）的活动 -->
+    <!-- 根视图需要android:fitsSystemWindows="true" -->
+    <style name="AppTheme.TranslucentSystemBar" parent="AppTheme">
+        <!-- API19开始支持状态栏全透明化 -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!-- 半透明系统栏（包括状态栏和虚拟键栏），无操作栏的活动 -->
+    <style name="AppTheme.TranslucentSystemBarAndNoActionBar" parent="AppTheme.NoActionBar">
+        <!-- API19开始支持状态栏全透明化 -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!-- 系统栏颜色跟随根布局联动，同时根布局需要android:fitsSystemWindows="true" -->
+    <style name="AppTheme.ColorSystemBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!-- 状态栏颜色跟随根布局联动，同时根布局需要android:fitsSystemWindows="true" -->
+    <style name="Activity.FitsStatusBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <!-- 透明状态栏 -->
+    <style name="Activity.TransparentStatusBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>
