@@ -35,4 +35,12 @@ public class MainActivity extends MyBaseActivity {
         super.onTitleChanged(title, color);
     }
 
+    // 演示输入框随软键盘上移
+    public void onSignIn(View view) {
+        startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    public void onSystemUI(View view) {
+        startActivity(new Intent(this, SystemUIActivity.class));
+    }
 }

@@ -33,10 +33,10 @@ public class WindowUtil {
         if (null != window) {
             // 一定要设置Background，如果不设置，window属性设置无效
             // window.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
-            WindowManager.LayoutParams lp = window.getAttributes();
-            lp.width = DisplayUtil.getInt(cxt, width);
-            lp.height = DisplayUtil.getInt(cxt, height);
-            window.setAttributes(lp);
+            WindowManager.LayoutParams params = window.getAttributes();
+            params.width = DisplayUtil.getInt(cxt, width);
+            params.height = DisplayUtil.getInt(cxt, height);
+            window.setAttributes(params);
             window.setGravity(Gravity.CENTER);
         }
     }
@@ -65,8 +65,9 @@ public class WindowUtil {
     }
 
     // =============================================================================================
-    // TODO: Control the system UI visibility
     // https://developer.android.com/training/system-ui/
+    // Control the system UI visibility
+    // 控制系统UI可见性
     // status bar 状态栏
     // navigation bar 导航栏（虚拟键栏）
     // =============================================================================================
@@ -81,8 +82,8 @@ public class WindowUtil {
     public static void dimSystemUI(Window window) {
         // This example uses decor view, but you can use any visible view.
         View decorView = window.getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_LOW_PROFILE;
-        decorView.setSystemUiVisibility(uiOptions);
+        int options = View.SYSTEM_UI_FLAG_LOW_PROFILE;
+        decorView.setSystemUiVisibility(options);
     }
 
     /**
@@ -114,8 +115,8 @@ public class WindowUtil {
         if (Build.VERSION.SDK_INT >= 16) {
             View decorView = window.getDecorView();
             // Hide the status bar.
-            int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-            decorView.setSystemUiVisibility(uiOptions);
+            int options = View.SYSTEM_UI_FLAG_FULLSCREEN;
+            decorView.setSystemUiVisibility(options);
             // Remember that you should never show the action bar if the
             // status bar is hidden, so hide that too if necessary.
             if (actionBar != null) actionBar.hide();
@@ -137,9 +138,9 @@ public class WindowUtil {
             // so that the content doesn't resize as the status bar hides and shows.
             // To do this, use SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN.
             // You may also need to use SYSTEM_UI_FLAG_LAYOUT_STABLE to help your app maintain a stable layout.
-            int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+            int options = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(uiOptions);
+            decorView.setSystemUiVisibility(options);
         }
     }
 
@@ -160,9 +161,9 @@ public class WindowUtil {
             // SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
             // a general rule, you should design your app to hide the status bar whenever you
             // hide the navigation bar.
-            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            int options = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                     | View.SYSTEM_UI_FLAG_FULLSCREEN;
-            decorView.setSystemUiVisibility(uiOptions);
+            decorView.setSystemUiVisibility(options);
         } else if (Build.VERSION.SDK_INT >= 12) {
             // lower api
             View decorView = window.getDecorView();
@@ -172,6 +173,7 @@ public class WindowUtil {
 
     /**
      * Make Content Appear Behind the Navigation Bar
+     * 使内容显示在导航栏的后面
      *
      * @author https://developer.android.com/training/system-ui/navigation#behind
      */
@@ -182,9 +184,9 @@ public class WindowUtil {
             // so that the content doesn't resize as the navigation bar hides and shows.
             // To do this, use SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION.
             // You may also need to use SYSTEM_UI_FLAG_LAYOUT_STABLE to help your app maintain a stable layout.
-            int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            int options = View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(uiOptions);
+            decorView.setSystemUiVisibility(options);
         }
     }
 
@@ -290,6 +292,7 @@ public class WindowUtil {
      * 状态栏或虚拟导航栏半透明，遮掩APP
      * <p>
      * Make Content Appear Behind the Status Bar
+     * 使内容显示在状态栏的后面
      * <p>
      * 在代码中实现兼容性更好，style 资源中设置的方式在某些国产手机厂商定制的系统中存在一些问题
      * 在基类的setContentView之后执行。

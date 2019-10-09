@@ -1,66 +1,4 @@
-# android-support-ui
-- 基于原生API，提供可复用的资源（string style color dimen anim layout drawable ），可复用代码（封装基类，工具类）
-- 展示Android UI的多样性
-
-## 发布
-* 最新版本
-
-| groupId | artifactId | version |
-| -------- | -------- | -------- |
-| com.amlzq.android | ui | [ ![Download](https://api.bintray.com/packages/amlzq/android-support-base/ui/images/download.svg) ](https://bintray.com/amlzq/android-support-base/ui/_latestVersion) |
-
-* 使用
-```
-dependencies{
-    ...
-    implementation 'com.amlzq.android:ui:latest.integration'
-}
-```
-
-## 工程结构
-* ./ui
-> ui library
-```
-package:
-com.amlzq.android.ui
-```
-
-* ./sample
-> sample application
-```
-package: com.amlzq.asb
-appName: UI支持库
-applicationId: com.amlzq.asb.ui
-```
-- [Install APK](https://www.pgyer.com/eYXy)
-
-## 规范
-- 布局控件id的命名
-    ```
-    以控件缩写为前缀
-    ```
-- 举例:
-    ```
-    iv_
-    tv_
-    btn_
-    ll_
-    rl_
-    ```
-- 布局文件的命名
-    ```
-    activity_
-    fragment_
-    dialog_
-    popwin_
-    toast_
-    snackbar_
-    content_
-    ```
-- 资源文件的命名
-    ```
-    activity_
-    ```
+## 实践
 
 #### Fragment相关
 - [Fragment中onHiddenChanged、setUserVisibleHint触发条件](https://github.com/LoganZy/AndroidTotal/blob/master/Fragment%E4%B8%ADonHiddenChanged%E3%80%81setUserVisibleHint%E8%A7%A6%E5%8F%91%E6%9D%A1%E4%BB%B6.md)
@@ -277,4 +215,41 @@ Lottie
     ```
     为"单Activity ＋ 多Fragment","多模块Activity + 多Fragment"架构而生，简化开发，轻松解决动画、嵌套、事务相关等问题。
     ```
-- []()
+- [android:fitsSystemWindows属性的用法](https://www.cnblogs.com/xgjblog/p/9517645.html)
+
+## 特性
+- 基于Platform API和AndroidX API源码
+- 提供可复用的资源（string style color dimen anim layout drawable）
+- 提供可复用的代码（封装基类，工具类）
+- 找到最佳实践方式，高质高效的布局Android UI
+- 实践界面元素，学习新布局
+
+## 发布
+* 最新版本
+
+| groupId | artifactId | version |
+| -------- | -------- | -------- |
+| com.amlzq.android | ui | [ ![Download](https://api.bintray.com/packages/amlzq/android-support-base/ui/images/download.svg) ](https://bintray.com/amlzq/android-support-base/ui/_latestVersion) |
+
+* 使用
+```
+dependencies{
+    ...
+    implementation 'com.amlzq.android:ui:latest.integration'
+}
+```
+
+## 工程结构
+* ui library
+> ./ui
+```
+package: com.amlzq.android.ui
+```
+
+* [sample application](https://www.pgyer.com/eYXy)
+> ./sample
+```
+package: com.amlzq.asb
+appName: UI支持库
+applicationId: com.amlzq.asb.ui
+```
