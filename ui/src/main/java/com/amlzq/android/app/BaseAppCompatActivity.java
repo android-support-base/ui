@@ -471,7 +471,7 @@ public abstract class BaseAppCompatActivity
 //    }
 
     // =============================================================================================
-    // TODO: 显示Toast或者Snackbar
+    // 显示Toast或者Snackbar
     // =============================================================================================
 
     protected void showToastShort(@StringRes int resId) {
@@ -504,6 +504,10 @@ public abstract class BaseAppCompatActivity
 
     protected void showWarnSnackbar(View view, String msg) {
         SnackbarUtil.showShort(view, msg, getColorCompat(R.color.colorWarn), getColorCompat(R.color.colorLight));
+    }
+
+    public View getContentView() {
+        return findViewById(android.R.id.content);
     }
 
 }
